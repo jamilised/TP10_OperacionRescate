@@ -1,6 +1,13 @@
-const bcrypt = require("bcryptjs");
-const { users } = require("../data/db");
-const { signToken } = require("../utils/token");
+//const bcrypt = require("bcryptjs"); --> Cambio esto por la línea de abajo
+import bcrypt from "bcryptjs";
+
+//const { users } = require("../data/db"); --> Cambio esto por la línea de abajo
+import users from "../data/db.js";
+
+//const { signToken } = require("../utils/token"); --> Cambio esto por la línea de abajo
+import signToken from "../utils/token.js";
+
+app.use(express.json()); 
 
 async function register(req, res, next) {
   try {

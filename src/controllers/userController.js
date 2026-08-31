@@ -1,4 +1,6 @@
-const { users } = require("../data/db");
+//const { users } = require("../data/db"); --> Cambio esto por la línea de abajo
+import { users } from "../data/db.js";
+
 
 function getProfile(req, res) {
   const user = users.find((u) => u.id === req.user.id);
