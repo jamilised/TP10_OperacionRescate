@@ -26,7 +26,8 @@ function updateMe(req, res) {
   return res.status(200).json({ message: "Perfil actualizado", user });
 }
 
-module.exports = {
+//Cambio "module.exports" por:
+export {
   getProfile,
   updateMe
 };

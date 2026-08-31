@@ -7,9 +7,8 @@ import users from "../data/db.js";
 //const { signToken } = require("../utils/token"); --> Cambio esto por la línea de abajo
 import signToken from "../utils/token.js";
 
-app.use(express.json()); 
-
-async function register(req, res, next) {
+// Cambio "async function register(req, res, next)" por:
+const register = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
 
@@ -45,7 +44,8 @@ async function register(req, res, next) {
   }
 }
 
-async function login(req, res, next) {
+// Cambio "async function login(req, res, next)" por:
+const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     const user = users.find((u) => u.email === email);
@@ -72,7 +72,8 @@ async function login(req, res, next) {
   }
 }
 
-module.exports = {
+//Cambio "module.exports =" por: 
+export {
   register,
   login
 };

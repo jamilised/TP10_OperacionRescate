@@ -9,6 +9,5 @@ function listUsers(req, res) {
   });
 }
 
-module.exports = {
-  listUsers
-};
+//Cambio "module.exports =" por: 
+export { listUsers };

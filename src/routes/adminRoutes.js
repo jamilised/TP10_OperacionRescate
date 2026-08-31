@@ -9,4 +9,5 @@ const router = express.Router();
 
 router.get("/all", listUsers);
 
-module.exports = router;
+// Cambio "module.exports = router;" por:
+export default router;
