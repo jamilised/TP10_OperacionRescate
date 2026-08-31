@@ -1,6 +1,12 @@
-const express = require("express");
-const authMiddleware = require("../middleware/authMiddleware");
-const { getProfile, updateMe } = require("../controllers/userController");
+//const express = require("express"); --> Cambio esto por la línea de abajo
+import express from "express";
+
+//const authMiddleware = require("../middleware/authMiddleware"); --> Cambio esto por la línea de abajo
+import authMiddleware from "../middleware/authMiddleware.js";
+
+//const { getProfile, updateMe } = require("../controllers/userController");  --> Cambio esto por la línea de abajo
+import { getProfile, updateMe } from "../controllers/userController.js";
+
 
 const router = express.Router();
 

@@ -2,7 +2,7 @@
 import bcrypt from "bcryptjs";
 
 //const { users } = require("../data/db"); --> Cambio esto por la línea de abajo
-import users from "../data/db.js";
+import { users } from "../data/db.js";
 
 //const { signToken } = require("../utils/token"); --> Cambio esto por la línea de abajo
 import signToken from "../utils/token.js";

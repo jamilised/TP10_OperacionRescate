@@ -8,6 +8,5 @@ const users = [
   }
 ];
 
-module.exports = {
-  users
-};
+// Cambio "module.exports =" por:
+export { users };

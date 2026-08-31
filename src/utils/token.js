@@ -1,4 +1,6 @@
-const jwt = require("jsonwebtoken");
+//Cambio "const jwt = require("jsonwebtoken");" --> Cambio esto por la línea de abajo
+import jwt from "jsonwebtoken";
+
 
 function signToken(user) {
   return jwt.sign(
@@ -8,6 +10,5 @@ function signToken(user) {
   );
 }
 
-module.export = {
-  signToken
-};
+//Cambio "module.export =" por:
+export { signToken };
