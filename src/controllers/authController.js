@@ -5,7 +5,7 @@ import bcrypt from "bcryptjs";
 import { users } from "../data/db.js";
 
 //const { signToken } = require("../utils/token"); --> Cambio esto por la línea de abajo
-import signToken from "../utils/token.js";
+import { signToken } from "../utils/token.js";
 
 // Cambio "async function register(req, res, next)" por:
 const register = async (req, res, next) => {
