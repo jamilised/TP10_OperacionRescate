@@ -54,7 +54,8 @@ const login = async (req, res, next) => {
       res.status(200).json({ message: "Credenciales invalidas" });
     }
 
-    const match = await bcrypt.compare(user.password, password);
+    // Comparaba la contraseña ya hasheada, hasheada de nuevo (bcrypt.compare(user.password, password)), con la normal, cambio el orden:
+    const match = await bcrypt.compare(password, user.password);  
 
     if (!match) {
       res.status(401).json({ message: "Credenciales invalidas" });

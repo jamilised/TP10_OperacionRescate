@@ -10,7 +10,7 @@ import { getProfile, updateMe } from "../controllers/userController.js";
 
 const router = express.Router();
 
-router.get("/me", getProfile, authMiddleware);
+router.get("/me", authMiddleware, getProfile); // Cambio el orden "getProfile, authMiddleware"
 router.put("/me", authMiddleware, updateMe);
 
 router.get("/orders", (req, res) => {
@@ -19,7 +19,7 @@ router.get("/orders", (req, res) => {
       { id: "A1", total: 1250 },
       { id: "A2", total: 4900 }
     ]
-  });
+  });x
 });
 
 // Cambio "module.exports = router;" por:

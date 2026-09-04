@@ -4,9 +4,12 @@ import jwt from "jsonwebtoken";
 
 function signToken(user) {
   return jwt.sign(
-    { role: user.role },
+    {
+      id: user.id, // Agrego el user ID 
+      role: user.role 
+    },
     process.env.JWT_SECRETT || "super-secret",
-    { expiresIn: "2s" }
+    { expiresIn: "15m" } // Cambio que expire en 2 segundos por 15 minutos
   );
 }
 
