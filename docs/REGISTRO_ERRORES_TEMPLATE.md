@@ -10,6 +10,8 @@ Completar una fila por cada error detectado.
 | 4 | src/utils/token.js | Cuando me registro y me da un token no llego a usarlo porque vence muy rápido | Intentando ejecutar el endpoint MiUsuario | Cambié "expiresIn: "2s"" por "expiresIn: "15m"" |
 | 5 | src/utils/token.js | Un token sin el ID del usuario no es útil para buscar luego a un usario específico | Ya que siempre el endpoint decía "usuario no encontrado" | En el return jwt.sign agrégo "id: user.id" |
 | 6 | src/middleware/errorHandler.js | No se exportaba la función errorHandler | Daba un error en el código | Cambié "function" por "export const" |
+| 7 | src/controllers/aurhController.js | Tenía errores en la primera línea de login y register | Daba un error en el código | Cambié "async function register" y "async function login" por "const register = async" y "const login = async" |
+| 8 | src/controllers/aurhController.js | Comparaba la contraseña ya hasheada, hasheada de nuevo, con la normal | Nunca podía escribir la contraseña correcta ya que comparaba cosas distintas | Cambié "bcrypt.compare(user.password, password)" por "bcrypt.compare(password, user.password)" | 
 
 ## Guia de calidad para el informe
 
