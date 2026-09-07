@@ -1,6 +1,5 @@
 //Cambio "function" por "export const"
 
-// export const errorHandler(err, req, res, next) 
 export const errorHandler = (err, req, res, next) => {
   console.error(err);
 

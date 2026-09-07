@@ -39,4 +39,4 @@ app.get("/", (req, res) => {
 app.use(errorHandler);
 
 // Cambio "module.exports = router;" por:
-export default app;;
+export default app;
