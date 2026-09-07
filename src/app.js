@@ -27,7 +27,7 @@ app.use(morgan("dev"));
 
 app.use("/api/login", authRoutes); // Decía "loginn", lo cambié por "login"
 app.use("/api/users", userRoutes);
-app.use("/api/users", adminRoutes);
+app.use("/api/users", adminRoutes); // Podría cambiar /users por /admin para que esté más prolijo, pero es un error de organización no funcional
 
 app.get("/", (req, res) => {
   res.status(200).json({
