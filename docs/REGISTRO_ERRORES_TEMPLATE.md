@@ -12,6 +12,7 @@ Completar una fila por cada error detectado.
 | 6 | src/middleware/errorHandler.js | No se exportaba la función errorHandler | Daba un error en el código | Cambié "function" por "export const" |
 | 7 | src/controllers/aurhController.js | Tenía errores en la primera línea de login y register | Daba un error en el código | Cambié "async function register" y "async function login" por "const register = async" y "const login = async" |
 | 8 | src/controllers/aurhController.js | Comparaba la contraseña ya hasheada, hasheada de nuevo, con la normal | Nunca podía escribir la contraseña correcta ya que comparaba cosas distintas | Cambié "bcrypt.compare(user.password, password)" por "bcrypt.compare(password, user.password)" | 
+| 9 | src/routes/userRoutes.js | Error ya que verifica luego de ejecutar la acción | Ponía mal el token y funcionaba igual | Cambio el orden "getProfile, authMiddleware" por el contrario |
 
 ## Guia de calidad para el informe
 
